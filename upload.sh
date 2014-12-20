@@ -11,7 +11,7 @@ find . -name .DS_Store -print0 | xargs -0 rm -f
 rsync -av --progress new/* /Volumes/NAS/music/.
 
 # sync new songs to local mirror
-rsync -nav --progress new/* .
+rsync -av --progress new/* .
 
 # clean out new songs (they're in the NAS and local mirror now)
 find new -type f -print0 | xargs -0 rm -f
